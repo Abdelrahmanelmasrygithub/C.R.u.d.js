@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crud</title>
+    <link rel="stylesheet" href="c.css">
+    
+</head>
+<body>
+    <div class="crud">
+<div class="head">
+    <h2>crud</h2>
+    <p>product management system</p>
+</div>
+
+
+<div class="inputs">
+<input placeholder="title" type="text" id="title">
+<div class="price">
+<input  onkeyup="gettotal ()" type="number"id="price" placeholder="price">
+<input   onkeyup="gettotal ()" id="taxes" placeholder="taxes" type="number">
+<input  onkeyup="gettotal ()"id="ads" placeholder="ads" type="number">
+<input onkeyup="gettotal ()" id="discount" placeholder="discount" type="number">
+<small id="total"></small>
+</div>
+<input id="count" placeholder="count" type="number">
+<input id="category" placeholder="category" type="text">
+<button id="submit">create</button>
+</div>
+<div class="outputs">
+    <div class="searchd">
+        <input onkeyup="searchdata(this.value)" id="search" placeholder="search" type="text">
+        <div class="btn">
+            <button  onclick="getsearchmod(this.id)" id="searchtitle">search by title</button>
+            <button onclick="getsearchmod(this.id)" id="searchtcategory"> search by category </button>
+        </div>
+    </div>
+    <div id="deletall">
+        
+    </div>
+    <table>
+<tr>
+    <th>id   </th>
+    <th>title</th>
+    <th>price</th>
+    <th>taxes</th>
+    <th>ads  </th>
+    <th>discount</th>
+    <th>total</th>
+    <th>category</th>
+    <th>update  </th>
+    <th>delete  </th>
+</tr>
+
+  <!--
+<tr>
+    <td>id   </td>
+    <td>title</td>
+   <td>price</td>
+    <td>taxes</td>
+    <td>ads  </td>
+    <td>discount</td>
+    <td>total</td>
+    <td>category</td>
+    <td>  <button id="update" >update</button>
+    </td>
+    <td><button id="delete" >delete</button></td>
+</tr>
+
+  -->
+    <tbody id="tbody">
+        
+    </tbody>
+</table>
+</div>
+
+
+    </div>
+    <script src="j.js"></script>
+</body>
+</html>
